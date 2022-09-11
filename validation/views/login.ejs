@@ -1,0 +1,51 @@
+<%- include('loginhead') %>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <body>
+
+    
+    </nav>
+   
+     
+    </div>
+    <div>
+    <section class="firstsection">
+      <h1>WELCOME TO USER LOGIN</h1>
+      </div>
+  </section>
+</body>
+<div class="form-center"> 
+  <div class="login">
+    <form method="POST" name="form1" action="/auth">
+    <label for="username">
+    <!-- font awesome icon -->
+    <i class="fas fa-user"></i></label>
+    <label >ENTER YOUR LOG ID</label>
+   <input type="text" id="logid" name="logid"><br><br>
+               
+   <label >ENTER YOUR PASSWORD</label>
+    <input type="text" id="password" name="password"><br><br>
+               
+    <input type="submit" value="LOGIN">
+                   
+    </form>
+    <br><br><br>
+    <form method="POST" name="form2" action="/UserDetails">
+      <input type="submit" value="REGISTER">
+      </form>
+      
+                
+    <% if (errMsg !== '') {%>
+    <p style="color:red; font-size:70%"><%= errMsg %></p> 
+     <% } else {%>
+    <p style="color:green; font-size:70%"><%= msg %></p> 
+     <% } %>
+    
+  </div> 
+   
+</div>
+
+</html>
